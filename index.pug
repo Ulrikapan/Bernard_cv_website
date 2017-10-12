@@ -1,0 +1,326 @@
+doctype html
+html(lang='zh-TW')
+    head
+        meta(charset="UTF-8")
+        //- 相容性模式
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        //-  相容性模式-end
+        meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes")
+        
+        //- SEO - - 
+        title Bernard CV
+        meta(name='company', content='Company')
+        meta(name='author', content='Ulrika Pan')
+        meta(name='copyright', content='本網頁著作權Ulrika Pan所有, All Rights Reserved')
+        meta(name='description', content='Bernard CV')
+        //- SEO-end
+
+
+        //- link - -
+        //- reset
+        link(rel='stylesheet' href='css/reset.css' type='text/css')
+
+        //- plugins
+        
+        link(rel="stylesheet", href="css/bootstrap.css")
+        //- custom
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900")
+        link(rel='stylesheet' href='css/base.css' type='text/css')
+        
+        link(rel="stylesheet", href="css/animate.css")
+        link(rel="stylesheet", href="css/jquery.fancybox.css")
+        link(rel="stylesheet", href="css/component.css")    
+        //- favicon
+        link(rel="shortcut icon" href="images/favicon.ico")
+
+        //- link- End--
+
+
+        //- OG
+        meta(property='og:title', content='CV demo')
+        meta(property='og:type', content='website')
+            //- website、article、video、music…擇一
+        meta(property='og:url', content=' http://www.example.com/')
+        meta(property='og:image', content=' http://example.com/image.jpg')
+            //- (解析須200x200至1500x1500之間，檔案大小在5MB以內)
+        meta(property='og:description', content='CV demo practice')
+        meta(property='og:site_name', content='Site Name, i.e. Moz')
+        //- OG-end
+
+    body
+
+        .wrapper
+            //- Start bg
+            .bg
+            //- End bg
+
+
+            //- Start header
+            header.header.jsHeader
+                .container
+                    nav.navbar.navbar--collapse.clearfix
+                        .social-bar.navbar__social-bar
+                            a.icon-btn(href="#")
+                                i.icon.icon-facebook-official
+                            a.icon-btn(href="#")
+                                i.icon.icon-dribbble
+                            a.icon-btn(href="#")
+                                i.icon.icon-behance
+
+                        .nav.navbar__nav
+                            a(href="#popup-overlay").menu-toggle
+                                span
+                                span
+                                span
+                            #popup-overlay.popup-menu
+                                .container
+                                    .clearfix
+                                        a(href="#!").popup-menu__close
+                                            span
+                                            span
+                                    ul
+                                        li
+                                            a.popup-menu__item(href="#about") ABOUT
+                                        li
+                                            a.popup-menu__item(href="#skill") SKILL
+                                        li
+                                            a.popup-menu__item(href="#experience") EXPERIENCE
+                                        li
+                                            a.popup-menu__item(href="#work") MY WORK
+                                        li
+                                            a.popup-menu__item(href="#contact") CONTACT                      
+
+            //- End header
+
+
+            //- Start main
+            section.main#about
+                //- Start about
+                .hero
+                    img.graphic_001(src="images/parallax_graphic/tri-blue.svg" data-stellar-ratio="0.5")
+                    img.graphic_002(src="images/parallax_graphic/cir-pink-sm.svg" data-stellar-ratio="1.5")
+                    .hero__bg
+                    .container
+                        .hero__content.wow.bounceInLeft
+                            h1.hero__heading Hi There, <br>I am Bernard
+                            a.btn.btn--md.btn--primary(href="#") Contact
+                //- End about
+                //- Start quote
+                .quote.lean-bg--top.mt-sm
+                    img.graphic_003(src="images/parallax_graphic/tri-purple.svg" data-stellar-vertical-offset="150" data-stellar-ratio="1.5")
+                    img.graphic_004(src="images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.5")
+                    .container
+                        .row
+                            .col-sm-6.col-sm-push-3
+                                .quote__content
+                                    .quote__icon
+                                        i.icon-quote-right
+                                    p.quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos facilis magni consequuntur maiores assumenda aut sequi architecto soluta rerum reprehenderit.
+                                    .quote__name
+                                        span Somebody -
+                                        |from somewhere
+
+                //- End quote
+                //- Start skill
+                .skill.lean-bg--bottom#skill
+                    .container
+                        h2.subtitle.wow.bounceInUp SKILL
+                        .skill-group
+                            img.graphic_005(src="images/parallax_graphic/dot-grey.svg" data-stellar-horizontal-offset="100"  data-stellar-ratio="1.5")
+                            img.graphic_006(src="images/parallax_graphic/cir-pink-md.svg" data-stellar-horizontal-offset="100"  data-stellar-ratio="1.2")
+                            .row
+                                .col-sm-6.wow.bounceInUp
+                                    .skill-card
+                                        .skill-card__inner
+                                            h4.skill-card__title HTML
+                                            p.skill-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate nulla voluptas, maiores laudantium blanditiis aut dignissimos magni, numquam enim?
+                                        .skill-card__icon
+                                            img.image(src="images/skill_icon/html-icon.png", alt="")
+                                .col-sm-6.wow.bounceInUp(data-wow-delay=".2s")
+                                    .skill-card
+                                        .skill-card__inner
+                                            h4.skill-card__title CSS
+                                            p.skill-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate nulla voluptas, maiores laudantium blanditiis aut dignissimos magni, numquam enim?
+                                        .skill-card__icon
+                                            img.image(src="images/skill_icon/css-icon.png", alt="")
+                            .row
+                                .col-sm-6.wow.bounceInUp(data-wow-delay=".4s")
+                                    .skill-card
+                                        .skill-card__inner
+                                            h4.skill-card__title SKETCH
+                                            p.skill-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate nulla voluptas, maiores laudantium blanditiis aut dignissimos magni, numquam enim?
+                                        .skill-card__icon
+                                            img.image(src="images/skill_icon/sketch-icon.png", alt="")
+                                .col-sm-6.wow.bounceInUp(data-wow-delay=".6s")
+                                    .skill-card
+                                        .skill-card__inner
+                                            h4.skill-card__title AI
+                                            p.skill-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate nulla voluptas, maiores laudantium blanditiis aut dignissimos magni, numquam enim?
+                                        .skill-card__icon
+                                            img.image(src="images/skill_icon/ai-icon.png", alt="")
+
+                //- End skill
+                //- Start experience
+                .experience#experience
+                    img.graphic_007(src="images/parallax_graphic/cir-purple-lg.svg" data-stellar-ratio="1.2")
+                    img.graphic_008(src="images/parallax_graphic/dot-grey.svg" data-stellar-ratio="1.2")
+                    img.graphic_009(src="images/parallax_graphic/cir-pink-sm.svg" data-stellar-ratio="1.5")
+                    img.graphic_010(src="images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.2")
+                    .container
+                        h2.subtitle.wow.bounceInUp EXPERIENCE
+                        .timeline-group
+                            .timeline
+                            .timeline-cards
+                                .timeline-cards__row.wow.bounceInUp
+                                    .timeline-card
+                                        p.timeline-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio natus, veritatis non placeat eum voluptas cupiditate neque necessitatibus illo! Est.
+                                .timeline-cards__row.wow.bounceInUp
+                                    .timeline-card
+                                        p.timeline-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio natus, veritatis non placeat eum voluptas cupiditate neque necessitatibus illo! Est.
+                                .timeline-cards__row.wow.bounceInUp
+                                    .timeline-card
+                                        p.timeline-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio natus, veritatis non placeat eum voluptas cupiditate neque necessitatibus illo! Est.
+                                .timeline-cards__row.wow.bounceInUp
+                                    .timeline-card
+                                        p.timeline-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio natus, veritatis non placeat eum voluptas cupiditate neque necessitatibus illo! Est.
+                                .timeline-cards__row.wow.bounceInUp
+                                    .timeline-card
+                                        p.timeline-card__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio natus, veritatis non placeat eum voluptas cupiditate neque necessitatibus illo! Est.
+                //- End experience
+                //- Start work
+                .work.lean-bg--top.lean-bg--bottom#work
+                    img.graphic_011(src="images/parallax_graphic/cir-pink-lg.svg" data-stellar-ratio="1.5")
+                    img.graphic_012(src="images/parallax_graphic/dot-grey.svg" data-stellar-ratio="1.5")
+                    img.graphic_013(src="images/parallax_graphic/tri-blue.svg" data-stellar-ratio="1.5")
+                    img.graphic_014(src="images/parallax_graphic/cir-purple-md.svg" data-stellar-ratio="1.5")
+                    img.graphic_015(src="images/parallax_graphic/dot-grey.svg" data-stellar-ratio="1.5")
+                    img.graphic_016(src="images/parallax_graphic/cir-pink-sm.svg" data-stellar-ratio="1.5")
+                    img.graphic_017(src="images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.5")
+                    img.graphic_018(src="images/parallax_graphic/tri-purple.svg" data-stellar-ratio="1.5")
+                    .container
+                        h2.subtitle.wow.bounceInUp MY WORKS
+                        .work-list
+                            .work-item.wow.fadeInUp
+                                .row
+                                    .col-sm-6.col-sm-push-5
+                                        .imgbox
+                                            a(href="images/works/work001.jpg" data-fancybox="myWork" )
+                                                .imgbox__inner
+                                                    .image(style="background-image: url('images/works/thumbnail/work001_thumb.jpg')")
+                                    .col-sm-4.col-sm-pull-5
+                                        .work-item__text.work-item__text--right
+                                            h3.work-item__title.work-item__title--right Work title for good design stuff
+                                            p.work-item__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quisquam reprehenderit perspiciatis minima unde rerum magnam, sit tenetur odio? Est!
+                                            a.text-btn.text-btn--lg.text-btn--primary(href="#") Show project
+                            .work-item.wow.fadeInUp
+                                .row
+                                    .col-sm-6.col-sm-push-1
+                                        .imgbox
+                                            a(href="images/works/work002.jpg" data-fancybox="myWork")
+                                                .imgbox__inner
+                                                    .image(style="background-image: url('images/works/thumbnail/work002_thumb.jpg')")
+                                    .col-sm-4.col-sm-push-1
+                                        .work-item__text
+                                            h3.work-item__title.work-item__title--left Work title for good design stuff
+                                            p.work-item__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quisquam reprehenderit perspiciatis minima unde rerum magnam, sit tenetur odio? Est!
+                                            a.text-btn.text-btn--lg.text-btn--primary(href="#") Show project
+                            .work-item.wow.fadeInUp
+                                .row
+                                    .col-sm-6.col-sm-push-6
+                                        .imgbox
+                                            a(href="images/works/work003.jpg" data-fancybox="myWork")
+                                                .imgbox__inner
+                                                    .image(style="background-image: url('images/works/thumbnail/work003_thumb.jpg')")
+                                    .col-sm-4.col-sm-pull-5
+                                        .work-item__text
+                                            h3.work-item__title.work-item__title--right Work title for good design stuff
+                                            p.work-item__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quisquam reprehenderit perspiciatis minima unde rerum magnam, sit tenetur odio? Est!
+                                            a.text-btn.text-btn--lg.text-btn--primary(href="#") Show project
+                            .work-item.wow.fadeInUp
+                                .row
+                                    .col-sm-6.col-sm-push-1
+                                        .imgbox
+                                            a(href="images/works/work004.jpg" data-fancybox="myWork")
+                                                .imgbox__inner
+                                                    .image(style="background-image: url('images/works/thumbnail/work004_thumb.jpg')")
+                                    .col-sm-4.col-sm-push-1
+                                        .work-item__text
+                                            h3.work-item__title Work title for good design stuff
+                                            p.work-item__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quisquam reprehenderit perspiciatis minima unde rerum magnam, sit tenetur odio? Est!
+                                            a.text-btn.text-btn--lg.text-btn--primary(href="#") Show project
+                            .work-item.wow.fadeInUp
+                                .row
+                                    .col-sm-6.col-sm-push-5
+                                        .imgbox
+                                            a(href="images/works/work005.jpg" data-fancybox="myWork")
+                                                .imgbox__inner
+                                                    .image(style="background-image: url('images/works/thumbnail/work005_thumb.jpg')")
+                                    .col-sm-4.col-sm-pull-5
+                                        .work-item__text.work-item__text--right
+                                            h3.work-item__title.work-item__title--right Work title for good design stuff
+                                            p.work-item__intro Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quisquam reprehenderit perspiciatis minima unde rerum magnam, sit tenetur odio? Est!
+                                            a.text-btn.text-btn--lg.text-btn--primary(href="#") Show project
+                        .btn-group.btn-group--center.wow.fadeInUp
+                            a.btn.btn--secondary.btn--md(href="#!") More Works
+                //- End work
+                //- Start contact
+                .contact#contact
+                    img.graphic_019(src="images/parallax_graphic/dot-grey.svg" data-stellar-ratio="1.5")
+                    img.graphic_020(src="images/parallax_graphic/cir-pink-sm.svg" data-stellar-ratio="1.5")
+                    img.graphic_021(src="images/parallax_graphic/tri-blue.svg" data-stellar-ratio="1.5")
+                    img.graphic_022(src="images/parallax_graphic/dot-blue.svg" data-stellar-ratio="1.5")
+                    .container
+                        h2.subtitle.wow.bounceInUp CONTACT
+                        form.form.wow.fadeInUp
+                            label(for="name") NAME
+                            input#name(type="text")
+                            .row
+                                .col-sm-6
+                                    label(for="phone") PHONE
+                                    input#phone(type="tel")
+                                .col-sm-6
+                                    label(for="email") E-MAIL
+                                    input#email(type="email")
+                            label(for="message") MESSAGE
+                            textarea#message
+                            .btn-group.btn-group--center
+                                input.btn.btn--md.btn--primary(type="submit" value="Send")
+
+                        .contact-content
+                            .divide-text or
+                            .info
+                                a.info__email.wow.bounceInUp(href="mailto:123@mail.com") 123@mail.com
+                                a.info__phone.wow.bounceInLeft(href="tel:0987654321") 0987654321
+                                .social-bar
+                                    a.icon-btn.wow.bounceIn(data-wow-delay=".3s" href="#")
+                                        i.icon.icon-twitter
+                                    a.icon-btn.wow.bounceIn(data-wow-delay=".6s" href="#")
+                                        i.icon.icon-dribbble
+                                    a.icon-btn.wow.bounceIn(data-wow-delay=".9s" href="#")
+                                        i.icon.icon-facebook-official
+
+                //- End contact
+            //- End main
+
+
+            //- Start footer
+            footer
+                .footer
+                    .container
+                        p.footer__text   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur, maiores repellat eos neque debitis possimus fugit vero perferendis natus nesciunt reprehenderit, eligendi beatae itaque aliq, nostrum inventore ex.
+                        p.copyright Copyright © Pan Pin Chun 2017 UI/UX web design course practice
+            //- End footer
+
+
+        //- Script - -
+        //- plugin
+        script(type='text/javascript' src="./js/jquery-3.2.1.min.js")
+        script(type='text/javascript' src="./js/jquery-2.0.2.min.js")
+        
+        script(type='text/javascript' src="./js/wow.min.js")
+        script(type='text/javascript' src="./js/jquery.fancybox.min.js")
+        script(type='text/javascript' src="./js/jquery.stellar.min.js")
+
+        //- custom
+        script(type='text/javascript' src="./js/custom.js")
+        //- Script - End
